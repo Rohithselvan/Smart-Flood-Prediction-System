@@ -11,7 +11,7 @@
 - [🏋️ Training the Model](#️-training-the-model)
 - [▶️ Running the Application](#️-running-the-application)
 - [📸 Demo](#-demo)
-- [📈 Prediction Output](#-prediction-output)
+- [📈 Results](#-results)
 - [🚀 Future Improvements](#-future-improvements)
 - [📄 License](#-license)
 
@@ -194,34 +194,62 @@ http://127.0.0.1:5000
 
 ## 📸 Demo
 
-### 🌆 Chennai — Low Risk
+### 🌆 Chennai — Low Flood Risk
+
+> Displays terrain analysis, weather conditions, and a 3-day flood forecast for Chennai.
 
 <img width="505" height="938" alt="Image" src="https://github.com/user-attachments/assets/5480cb9d-25e3-40b3-b5ef-30ee545923ce" />
 
 ---
 
-### ⛰️ Munnar — Mountain Terrain Analysis
+### ⛰️ Munnar — Mountain Terrain
+
+> Demonstrates prediction for a high-elevation region with different terrain characteristics.
 
 <img width="510" height="944" alt="Image" src="https://github.com/user-attachments/assets/90c92fc2-3f04-4a09-964e-bd47adf1ac94" />
 
 ---
 
-### 🌧️ Goa — Moderate / High Flood Risk
+### 🌧️ Goa — Moderate Flood Risk
+
+> Example showing increased flood probability due to weather and terrain conditions.
 
 <img width="499" height="939" alt="Image" src="https://github.com/user-attachments/assets/2e81ecc8-db9e-44b8-a2f1-27772fb938b6" />
 
 ---
 
-## 📈 Prediction Output
+# 📊 Results
 
-For every searched location, the application provides:
+The Smart Flood Prediction System combines geospatial analysis, real-time weather forecasting, and machine learning to estimate flood risk for the next three days based on a user-selected location.
 
-* 📍 Location visualization on the map
-* 🛰️ Terrain feature extraction
-* 🌧️ Weather forecast
-* 📅 3-day flood probability
-* ⚠️ Risk classification
-* 📊 Summary of expected conditions
+### Key Outcomes
+
+- 🌍 Predicts flood risk using only a **location name** as input
+- 🛰️ Automatically retrieves geographical coordinates using **OpenStreetMap**
+- ⛰️ Extracts terrain and elevation information using public APIs
+- 🌧️ Fetches real-time weather data for flood risk assessment
+- 🤖 Uses an ensemble of **Random Forest** and **Gradient Boosting** models for prediction
+- 📅 Generates flood probability forecasts for the next **3 days**
+- ⚠️ Classifies flood risk into **Low**, **Moderate**, and **High** categories
+- 🗺️ Displays an interactive map along with prediction results
+- 💻 Provides a responsive and user-friendly web interface
+- 📓 Includes Jupyter notebooks for **reproducibility** and **experimentation**, while the `src/` directory contains the production-ready implementation
+
+---
+
+### Highlights
+
+| Capability | Status |
+|------------|:------:|
+| Location Search | ✅ |
+| Terrain Feature Extraction | ✅ |
+| Weather Forecast Integration | ✅ |
+| Ensemble Machine Learning | ✅ |
+| 3-Day Flood Prediction | ✅ |
+| Interactive Map | ✅ |
+| Responsive Web Interface | ✅ |
+| Training Notebook | ✅ |
+| Testing Notebook | ✅ |
 
 ---
 
