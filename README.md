@@ -1,9 +1,4 @@
 <img width="1535" height="1024" alt="Image" src="https://github.com/user-attachments/assets/abd1142a-dffb-4837-b4e8-140f15e05f9e" />
-# 🌊 Smart Flood Prediction System
-
-A machine learning-based web application that predicts **flood risk for the next three days** using **terrain analysis**, **weather forecasting**, and an **ensemble machine learning model**.
-
-The application allows users to search for any location, automatically retrieves its geographical and weather information, computes terrain features, and predicts flood probability through an interactive web interface.
 
 ## 📚 Table of Contents
 
