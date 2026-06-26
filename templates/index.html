@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flood Prediction System</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<!-- Animated background particles -->
+<div class="bg-particles">
+  <div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div>
+  <div class="particle"></div><div class="particle"></div>
+</div>
+
+<!-- Rain overlay -->
+<div class="rain-container" id="rainContainer"></div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-badge">AI POWERED</div>
+    <div class="header-icon-wrap">
+      <div class="header-icon-ring"></div>
+      <div class="header-icon">🌊</div>
+    </div>
+    <h1>Flood Prediction System</h1>
+    <p>Enter an area name to get an AI-powered 3-day flood risk forecast</p>
+    <div class="header-stats">
+      <div class="stat"><span class="stat-dot green"></span>Model Active</div>
+      <div class="stat"><span class="stat-dot blue"></span>Live Weather</div>
+      <div class="stat"><span class="stat-dot purple"></span>Real Terrain</div>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-section">
+    <div class="search-wrap" id="searchWrap">
+      <span class="search-icon">📍</span>
+      <div class="search-input-wrap">
+        <input
+          type="text"
+          id="areaInput"
+          placeholder="Search any location... e.g. Chennai, Mumbai, Kerala"
+          autocomplete="off"
+        />
+        <!-- Suggestions Dropdown -->
+        <div id="suggestions" class="suggestions hidden"></div>
+      </div>
+      <button id="searchBtn" class="btn-search">
+        <span class="btn-text">Search</span>
+        <span class="btn-icon">→</span>
+      </button>
+    </div>
+    <div id="searchError" class="error-msg hidden"></div>
+  </div>
+
+  <!-- Map -->
+  <div id="mapWrap" class="map-wrap hidden">
+    <div class="map-header">
+      <span>🗺️ Location Map</span>
+      <span id="coordBadge" class="coord-badge"></span>
+    </div>
+    <div id="map"></div>
+    <div id="locationInfo" class="location-info"></div>
+  </div>
+
+  <!-- Terrain Info -->
+  <div id="terrainWrap" class="terrain-wrap hidden">
+    <div class="terrain-header" id="terrainToggle">
+      <div class="terrain-header-left">
+        <span class="terrain-icon">📊</span>
+        <span>Auto-fetched Terrain Data</span>
+        <span class="terrain-badge">LIVE</span>
+      </div>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div id="terrainBody" class="terrain-body">
+      <div id="terrainGrid" class="terrain-grid"></div>
+    </div>
+  </div>
+
+  <!-- Predict Button -->
+  <div id="predictWrap" class="hidden">
+    <button id="predictBtn" class="btn-predict">
+      <span class="predict-icon">🌧️</span>
+      <span class="predict-text">Predict Flood Risk for Next 3 Days</span>
+      <span class="predict-arrow">→</span>
+    </button>
+  </div>
+
+  <!-- Results -->
+  <div id="resultsWrap" class="hidden">
+    <div class="results-header">
+      <h2 class="results-title">📅 3-Day Flood Risk Forecast</h2>
+      <div class="results-subtitle" id="resultsLocation"></div>
+    </div>
+    <div id="resultsGrid" class="results-grid"></div>
+    <div id="summary" class="summary"></div>
+  </div>
+
+  <div class="footer">
+    <span>🌊 Pluvial Flood Prediction</span>
+    <span class="footer-dot">·</span>
+    <span>Ensemble ML Model</span>
+    <span class="footer-dot">·</span>
+    <span>OpenStreetMap & Open-Meteo</span>
+  </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
